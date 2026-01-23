@@ -1,10 +1,11 @@
 /**
- * i18n-portuguese-migration Agent Matcher (v2.0)
+ * Universal UserPromptSubmit Matcher Template (v2.0)
  *
- * Matches user prompts related to i18n migration tasks:
- * - Locating i18n files and their usages across the codebase
- * - Replacing i18n key references with Portuguese translations
- * - Removing or cleaning up i18n files after migration
+ * This template is used by the `setup` command to auto-generate
+ * matchers for skills and agents. Claude Haiku fills in the keywords array
+ * based on the skill/agent description.
+ *
+ * IMPORTANT: All return fields are MANDATORY and must not be undefined/null.
  *
  * @param {Object} context - Matcher context
  * @param {string} context.prompt - User's prompt text
@@ -19,14 +20,15 @@
 module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
+  // Keywords for prompt-engineering skill
   const keywords = [
-    'migrate',
-    'i18n',
-    'replace',
-    'find all',
-    'remove i18n',
-    'portuguese',
-    'internationalization'
+    'craft a prompt',
+    'improve this prompt',
+    'create agent',
+    'spawn a subagent',
+    'optimize agent',
+    'agent instructions',
+    'refine instructions'
   ];
 
   // Count matching keywords
@@ -34,8 +36,8 @@ module.exports = function (context) {
 
   // IMPORTANT: All fields are MANDATORY and must not be undefined/null
   return {
-    version: '2.0',
-    matchCount: matchCount,
-    type: 'agent'
+    version: '2.0', // Required: always "2.0"
+    matchCount: matchCount, // Required: number of matches (0+)
+    type: 'skill', // Required: identifies this as a skill matcher
   };
 };

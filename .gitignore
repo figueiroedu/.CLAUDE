@@ -7,6 +7,20 @@
 !commands/**
 !skills/
 !skills/**
+!plugins/
+!plugins/**
+!output-styles/
+!output-styles/**
+!hooks/
+!hooks/**
 
+!.mcp.json
+!CLAUDE.md
+!settings.json
 !README.md
 !.gitignore
+
+hooks/**/logs/
+plugins/known_marketplaces.json
+settings.local.json
+
