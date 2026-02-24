@@ -21,13 +21,15 @@ module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
   // Keywords for prompt-engineering skill
+  // Triggers: prompt crafting, optimization, agent/subagent creation, instruction design
   const keywords = [
     'craft a prompt',
     'improve this prompt',
-    'create agent',
-    'spawn a subagent',
-    'optimize agent',
+    'subagent',
     'agent instructions',
+    'prompt',
+    'optimize',
+    'costar',
     'refine instructions'
   ];
 
@@ -38,6 +40,6 @@ module.exports = function (context) {
   return {
     version: '2.0', // Required: always "2.0"
     matchCount: matchCount, // Required: number of matches (0+)
-    type: 'skill', // Required: identifies this as a skill matcher
+    type: 'skill', // Required: 'skill' for skills, 'agent' for agents
   };
 };

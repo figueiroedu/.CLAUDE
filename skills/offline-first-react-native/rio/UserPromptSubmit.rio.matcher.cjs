@@ -22,13 +22,14 @@ module.exports = function (context) {
 
   // Keywords for offline-first React Native skill
   const keywords = [
+    'offline',
+    'react native',
     'mmkv',
     'react query',
     'netinfo',
-    'offline',
-    'react native',
-    'expo',
     'cache',
+    'sync',
+    'persist',
   ];
 
   // Count matching keywords

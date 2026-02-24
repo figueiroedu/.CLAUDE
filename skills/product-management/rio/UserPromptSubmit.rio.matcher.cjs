@@ -14,13 +14,13 @@ module.exports = function (context) {
   // Keywords for product-management skill detection
   const keywords = [
     'implement',
-    'spec',
-    'delegate',
-    'coder',
-    'feature',
+    'add',
+    'create',
+    'build',
     'refactor',
-    'pm',
-    'assessment'
+    'fix',
+    'spec',
+    'feature'
   ];
 
   // Count matching keywords

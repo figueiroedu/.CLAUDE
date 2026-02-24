@@ -23,12 +23,12 @@ module.exports = function (context) {
   const keywords = [
     'commit',
     'git',
+    'stage',
+    'conventional',
     'feat',
     'fix',
-    'stage',
     'atomic',
-    'refactor',
-    'conventional commits',
+    'diff'
   ];
 
   // Count matching keywords
@@ -36,8 +36,8 @@ module.exports = function (context) {
 
   // IMPORTANT: All fields are MANDATORY and must not be undefined/null
   return {
-    version: '2.0', // Required: always "2.0"
-    matchCount: matchCount, // Required: number of matches (0+)
-    type: 'skill', // Required: skill matcher
+    version: '2.0',
+    matchCount: matchCount,
+    type: 'skill',
   };
 };
