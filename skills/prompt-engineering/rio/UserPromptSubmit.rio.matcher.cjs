@@ -21,16 +21,16 @@ module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
   // Keywords for prompt-engineering skill
-  // Triggers: prompt crafting, optimization, agent/subagent creation, instruction design
+  // Triggers from skill description: prompt crafting, optimization, agent/subagent creation, instruction design
   const keywords = [
     'craft a prompt',
     'improve this prompt',
-    'subagent',
-    'agent instructions',
-    'prompt',
-    'optimize',
-    'costar',
-    'refine instructions'
+    'create agent',
+    'spawn subagent',
+    'optimize agent',
+    "agent isn't working",
+    'refine instructions',
+    'design agent definition'
   ];
 
   // Count matching keywords

@@ -1,11 +1,8 @@
 /**
- * Universal UserPromptSubmit Matcher Template (v2.0)
+ * UserPromptSubmit Matcher for Debug Command (v2.0)
  *
- * This template is used by the `setup` command to auto-generate
- * matchers for skills and agents. Claude Haiku fills in the keywords array
- * based on the skill/agent description.
- *
- * IMPORTANT: All return fields are MANDATORY and must not be undefined/null.
+ * Matches prompts related to debugging issues by investigating logs,
+ * database state, and git history.
  *
  * @param {Object} context - Matcher context
  * @param {string} context.prompt - User's prompt text
@@ -20,24 +17,22 @@
 module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
-  // Keywords for feature-refiner agent: specification refinement and architecture
   const keywords = [
-    'refine',
-    'architect',
-    'simplify',
-    'clarify',
-    'design',
-    'plan',
+    'debug',
     'investigate',
+    'logs',
+    'error',
+    'troubleshoot',
+    'issue',
+    'diagnose',
+    'analyze'
   ];
 
-  // Count matching keywords
   const matchCount = keywords.filter((keyword) => prompt.includes(keyword)).length;
 
-  // IMPORTANT: All fields are MANDATORY and must not be undefined/null
   return {
-    version: '2.0', // Required: always "2.0"
-    matchCount: matchCount, // Required: number of matches (0+)
-    type: 'agent', // Required: "agent" for this feature-refiner agent
+    version: '2.0',
+    matchCount: matchCount,
+    type: 'command',
   };
 };

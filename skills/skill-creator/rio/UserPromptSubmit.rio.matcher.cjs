@@ -8,14 +8,14 @@ module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
   const keywords = [
-    'create skill',
+    'create a skill',
     'skill',
-    'procedural',
-    'workflow',
-    'bundled',
-    'script',
-    'template',
-    'metadata'
+    'skill.md',
+    'bundled resources',
+    'scripts',
+    'references',
+    'assets',
+    'workflow'
   ];
 
   const matchCount = keywords.filter((keyword) => prompt.includes(keyword)).length;

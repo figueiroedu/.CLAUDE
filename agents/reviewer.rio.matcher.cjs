@@ -23,12 +23,12 @@ module.exports = function (context) {
   const keywords = [
     'review',
     'code review',
+    'review code',
     'audit',
     'analyze',
-    'check for issues',
     'investigate',
     'examine',
-    'assess quality'
+    'assess'
   ];
 
   // Count matching keywords

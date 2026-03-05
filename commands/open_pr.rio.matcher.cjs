@@ -20,15 +20,16 @@
 module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
-  // Keywords for feature-refiner agent: specification refinement and architecture
+  // TODO: Haiku fills this array with relevant keywords
   const keywords = [
-    'refine',
-    'architect',
-    'simplify',
-    'clarify',
-    'design',
-    'plan',
-    'investigate',
+    'create pull request',
+    'open pr',
+    'pr',
+    'pull request',
+    'github',
+    'merge',
+    'branch',
+    'push',
   ];
 
   // Count matching keywords
@@ -38,6 +39,6 @@ module.exports = function (context) {
   return {
     version: '2.0', // Required: always "2.0"
     matchCount: matchCount, // Required: number of matches (0+)
-    type: 'agent', // Required: "agent" for this feature-refiner agent
+    type: 'command', // TODO: Haiku sets to 'skill' or 'agent' based on context
   };
 };

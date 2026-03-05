@@ -1,11 +1,10 @@
 /**
- * Universal UserPromptSubmit Matcher Template (v2.0)
+ * UserPromptSubmit Matcher for /commit command (v2.0)
  *
- * This template is used by the `setup` command to auto-generate
- * matchers for skills and agents. Claude Haiku fills in the keywords array
- * based on the skill/agent description.
- *
- * IMPORTANT: All return fields are MANDATORY and must not be undefined/null.
+ * Detects when users want to create git commits with:
+ * - Explicit commit requests
+ * - Git operations and staging changes
+ * - Version control workflow operations
  *
  * @param {Object} context - Matcher context
  * @param {string} context.prompt - User's prompt text
@@ -20,15 +19,14 @@
 module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
-  // Keywords for feature-refiner agent: specification refinement and architecture
   const keywords = [
-    'refine',
-    'architect',
-    'simplify',
-    'clarify',
-    'design',
-    'plan',
-    'investigate',
+    'commit',
+    'git commit',
+    'stage changes',
+    'save changes',
+    'create commit',
+    'push changes',
+    'version control'
   ];
 
   // Count matching keywords
@@ -36,8 +34,8 @@ module.exports = function (context) {
 
   // IMPORTANT: All fields are MANDATORY and must not be undefined/null
   return {
-    version: '2.0', // Required: always "2.0"
-    matchCount: matchCount, // Required: number of matches (0+)
-    type: 'agent', // Required: "agent" for this feature-refiner agent
+    version: '2.0',
+    matchCount: matchCount,
+    type: 'command'
   };
 };

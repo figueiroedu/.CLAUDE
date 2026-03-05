@@ -23,12 +23,13 @@ module.exports = function (context) {
   // Keywords for Node.js + Fastify skill detection
   const keywords = [
     'fastify',
+    'node.js',
     'typescript',
+    'api',
     'repository',
-    'service',
-    'plugin',
-    'schema',
-    'error handler'
+    'service layer',
+    'routes',
+    'schema'
   ];
 
   // Count matching keywords

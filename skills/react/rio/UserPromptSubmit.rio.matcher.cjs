@@ -1,11 +1,11 @@
 /**
- * Universal UserPromptSubmit Matcher Template (v2.0)
+ * React Skill Matcher (v2.0)
  *
- * This template is used by the `setup` command to auto-generate
- * matchers for skills and agents. Claude Haiku fills in the keywords array
- * based on the skill/agent description.
- *
- * IMPORTANT: All return fields are MANDATORY and must not be undefined/null.
+ * Matches user prompts related to React development including:
+ * - Building React components with modern patterns
+ * - React hooks and state management
+ * - TypeScript in React applications
+ * - Frontend debugging and performance optimization
  *
  * @param {Object} context - Matcher context
  * @param {string} context.prompt - User's prompt text
@@ -20,14 +20,16 @@
 module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
+  // Keywords for React skill matching
   const keywords = [
     'react',
-    'component',
     'hooks',
-    'jsx',
+    'component',
     'typescript',
     'state management',
+    'jsx',
     'performance',
+    'debugging',
   ];
 
   // Count matching keywords
@@ -35,8 +37,8 @@ module.exports = function (context) {
 
   // IMPORTANT: All fields are MANDATORY and must not be undefined/null
   return {
-    version: '2.0', // Required: always "2.0"
-    matchCount: matchCount, // Required: number of matches (0+)
-    type: 'skill', // Skill type matcher
+    version: '2.0',
+    matchCount: matchCount,
+    type: 'skill',
   };
 };

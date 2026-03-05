@@ -20,15 +20,15 @@
 module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
-  // Keywords for feature-refiner agent: specification refinement and architecture
   const keywords = [
-    'refine',
-    'architect',
-    'simplify',
-    'clarify',
-    'design',
+    'validate',
+    'verify',
+    'check',
+    'test',
+    'implementation',
     'plan',
-    'investigate',
+    'criteria',
+    'confirm'
   ];
 
   // Count matching keywords
@@ -38,6 +38,6 @@ module.exports = function (context) {
   return {
     version: '2.0', // Required: always "2.0"
     matchCount: matchCount, // Required: number of matches (0+)
-    type: 'agent', // Required: "agent" for this feature-refiner agent
+    type: 'command', // Required: command type
   };
 };

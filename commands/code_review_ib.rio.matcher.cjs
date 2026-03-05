@@ -1,11 +1,8 @@
 /**
- * Universal UserPromptSubmit Matcher Template (v2.0)
+ * Code Review - BMP Internet Banking Matcher (v2.0)
  *
- * This template is used by the `setup` command to auto-generate
- * matchers for skills and agents. Claude Haiku fills in the keywords array
- * based on the skill/agent description.
- *
- * IMPORTANT: All return fields are MANDATORY and must not be undefined/null.
+ * Matches user prompts requesting code reviews for BMP Internet Banking projects.
+ * Focuses on React/TypeScript code validation against ADS standards.
  *
  * @param {Object} context - Matcher context
  * @param {string} context.prompt - User's prompt text
@@ -20,15 +17,13 @@
 module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
-  // Keywords for feature-refiner agent: specification refinement and architecture
   const keywords = [
-    'refine',
-    'architect',
-    'simplify',
-    'clarify',
-    'design',
-    'plan',
-    'investigate',
+    'review',
+    'check',
+    'inspect',
+    'verify',
+    'audit',
+    'standards',
   ];
 
   // Count matching keywords
@@ -36,8 +31,8 @@ module.exports = function (context) {
 
   // IMPORTANT: All fields are MANDATORY and must not be undefined/null
   return {
-    version: '2.0', // Required: always "2.0"
-    matchCount: matchCount, // Required: number of matches (0+)
-    type: 'agent', // Required: "agent" for this feature-refiner agent
+    version: '2.0',
+    matchCount: matchCount,
+    type: 'command',
   };
 };

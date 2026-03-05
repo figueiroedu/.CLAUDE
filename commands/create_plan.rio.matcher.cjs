@@ -20,15 +20,16 @@
 module.exports = function (context) {
   const prompt = context.prompt.toLowerCase();
 
-  // Keywords for feature-refiner agent: specification refinement and architecture
+  // Keywords for create_plan command - focused on planning, design, research, and structuring workflows
   const keywords = [
-    'refine',
-    'architect',
-    'simplify',
-    'clarify',
-    'design',
     'plan',
-    'investigate',
+    'design',
+    'research',
+    'structure',
+    'scope',
+    'strategy',
+    'breakdown',
+    'specification'
   ];
 
   // Count matching keywords
@@ -38,6 +39,6 @@ module.exports = function (context) {
   return {
     version: '2.0', // Required: always "2.0"
     matchCount: matchCount, // Required: number of matches (0+)
-    type: 'agent', // Required: "agent" for this feature-refiner agent
+    type: 'command', // Required: this is a command (slash command)
   };
 };
